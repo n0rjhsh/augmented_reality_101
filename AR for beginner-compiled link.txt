@@ -1,0 +1,28 @@
+Compiled link - AR Tutorial for Beginner
+
+STEP 1: 3D MODEL
+3D model file resources - 1) Poly Google - https://poly.google.com/
+2) Sketchfab - https://sketchfab.com/
+
+
+STEP 2: GLB PACKER
+GLB Packer to pack glTF 3D model file - https://glb-packer.glitch.me/
+
+
+STEP 3: AR.js MARKER TRAINING
+AR.js Marker Training - https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html
+
+
+STEP 4: GLITCH
+Programming Environment in Web Browser: https://glitch.com/
+
+
+STEP 5: GITHUB
+1) Marker-based HTML code modified from the Official repository AR.js - https://github.com/kurusty/Augmented-Reality-1.0-
+2) Official repository AR.js - https://github.com/AR-js-org/AR.js
+3) Old repository AR.js - https://github.com/jeromeetienne/AR.js
+4) AR.js - Augmented Reality on the Web - https://ar-js-org.github.io/AR.js-Docs/#arjs-augmented-reality-on-the-web
+
+
+EXTRA:
+QR code generator - https://www.the-qrcode-generator.com/
