@@ -1,0 +1,43 @@
+<!-- https://ar-js-org.github.io/AR.js-Docs/-->
+<!--Include https://github.com/n5ro/aframe-extras for animated 3D model-->
+<!--Note to self: In order for this code  to work, the following things are required for the gltf-model:
+The entire folder with scene.bin and scene.gltf must be uploaded to GitHub
+The URL must include https
+The URL must start with https://arjs-cors-proxy.herokuapp.com/
+Check that gltf is working at https://gltf-viewer.donmccurdy.com/
+-->
+
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<!-- we import arjs version without NFT but with marker + location based support -->
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+<body style="margin : 0px; overflow: hidden;">
+  <a-scene
+    embedded
+    artoolkit="sourceType: webcam; sourceWidth: 240; sourceHeight: 180;"
+    antialias="true"
+    outline
+  >
+    <a-assets>
+      <a-asset-item
+        id="mymodel"
+        src="https://arjs-cors-proxy.herokuapp.com/https://raw.githubusercontent.com/n0rjhsh/augmented_reality_101/main/stylized_ww1_plane/scene.gltf"
+      ></a-asset-item>
+    </a-assets>
+    <a-marker
+      type="pattern"
+      url="https://cdn.glitch.me/1c15e96b-2736-4aa9-ad27-c039ecb38b09%2Fpattern-flower-colour-pencil-drawing-21%20(1).patt?v=1636368027971"
+      size="1"
+    >
+      <a-entity mmd="outline: true" afterglow:2.0;>
+        <a-entity
+          animation-mixer="clip: Take 001; loop:infinite"
+          position="0 0 0"
+          scale="5 5 5"
+          gltf-model="#mymodel"
+        ></a-entity>
+      </a-entity>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
