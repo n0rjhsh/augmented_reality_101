@@ -1,0 +1,23 @@
+<!--animated AR with different marker-->
+<script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+<body style="margin : 0px; overflow: hidden;">
+  <a-scene embedded arjs>
+    <a-marker
+      type="pattern"
+      url="https://cdn.glitch.me/801783c5-5cab-44de-bd95-cf84dcbc59a2%2Fpattern-rocket002.patt?v=1638078010719"
+      size="1"
+    >
+      <a-entity
+        animation-mixer="Clip: Experiment; loop:infinite"
+        position="0 0 0"
+        scale="0.1 0.1 0.1"
+        rotation="0 0 0"
+        gltf-model="https://cdn.glitch.me/801783c5-5cab-44de-bd95-cf84dcbc59a2%2Frobot.glb?v=1638076014941"
+      ></a-entity>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
