@@ -11,12 +11,12 @@
     <a-assets>
       <a-asset-item
         id="mymodel"
-        src="PASTE URL FOR 3D MODEL HERE"
+        src="PASTE URL FOR 3D MODEL HERE INCLUDE HTTPS://"
       ></a-asset-item>
     </a-assets>
     <a-marker
       type="pattern"
-      url="PASTE URL FOR MARKER IN .PATT FORMAT HERE"
+      url="PASTE URL FOR MARKER IN .PATT FORMAT HERE INCLUDE HTTPS://"
       size="1"
     >
       <a-entity mmd="outline: true" afterglow:2.0;>
