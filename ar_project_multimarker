@@ -1,0 +1,59 @@
+<!-- https://ar-js-org.github.io/AR.js-Docs/-->
+<!--Note to self: In order for this code  to work, the following things are required for the gltf-model:
+The entire folder with scene.bin and scene.gltf must be uploaded to GitHub
+The URL must include https
+The URL must start with https://arjs-cors-proxy.herokuapp.com/
+Check that gltf is working at https://gltf-viewer.donmccurdy.com/
+-->
+
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<!-- we import arjs version without NFT but with marker + location based support -->
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+<body style="margin: 0px; overflow: hidden">
+  <a-scene
+    embedded
+    arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
+  >
+    <!-- handle unknown marker -->
+    <!-- <a-marker type='unknown'>
+			<a-box depth="1" height="1" width="1" position='0 0.5 0' material='opacity: 0.5; side:double; color:blue;'></a-box>
+		</a-marker> -->
+
+    <!-- handle hiro marker -->
+    <a-marker preset="hiro">
+      <a-entity
+        animation-mixer="Clip: All Animations; loop:infinite"
+        position="0 0 0"
+        scale="1 1 1"
+        rotation="0 0 0"
+        gltf-model="https://cdn.glitch.global/28d0a939-a672-4b6e-90ec-1e4854b9b066/hamster.glb?v=1643352293049"
+      ></a-entity>
+    </a-marker>
+
+    <!-- handle matrix marker -->
+    <a-marker type="barcode" value="5">
+       <a-entity
+        animation-mixer="Clip: All Animations; loop:infinite"
+        position="0 0 0"
+        scale="1 1 1"
+        rotation="0 0 0"
+        gltf-model="https://cdn.glitch.global/28d0a939-a672-4b6e-90ec-1e4854b9b066/cow.glb?v=1643352327461"
+      ></a-entity>
+    </a-marker>
+
+    <!-- handle kanji marker -->
+    <a-marker preset="kanji">
+        <a-entity
+        animation-mixer="Clip: All Animations; loop:infinite"
+        position="0 0 0"
+        scale="1 1 1"
+        rotation="0 0 0"
+        gltf-model="https://cdn.glitch.global/28d0a939-a672-4b6e-90ec-1e4854b9b066/guineapig.glb?v=1643352458887"
+      ></a-entity>
+    </a-marker>
+
+    <!-- add a simple camera -->
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
