@@ -1,21 +1,20 @@
-<!--animated AR with customized marker-->
-<script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 
 <body style="margin : 0px; overflow: hidden;">
-  <a-scene embedded arjs>
+  <a-scene embedded arjs="patternRatio: 0.6">
     <a-marker
       type="pattern"
-      url="https://cdn.glitch.me/801783c5-5cab-44de-bd95-cf84dcbc59a2%2Fpattern-rocket002.patt?v=1638078010719"
+      url="PASTE URL FOR MARKER IN .PATT FORMAT HERE INCLUDE HTTPS://"
       size="1"
     >
       <a-entity
-        animation-mixer="Clip: Experiment; loop:infinite"
+        animation-mixer="Clip: ANIMATION LABEL REFER TO FILE SOURCE; loop:infinite"
         position="0 0 0"
-        scale="0.1 0.1 0.1"
+        scale="1 1 1"
         rotation="0 0 0"
-        gltf-model="https://cdn.glitch.me/801783c5-5cab-44de-bd95-cf84dcbc59a2%2Frobot.glb?v=1638076014941"
+        gltf-model="PASTE URL FOR 3D MODEL HERE INCLUDE HTTPS://"
       ></a-entity>
     </a-marker>
     <a-entity camera></a-entity>
